@@ -1,7 +1,0 @@
-# In C# integers is a seperate type 4 bytes, "double" 8 bytes
-
-# Everything in C# has to be in a class (or struct, which is a lightweight class (not an object))
-# Each variable can only keep data of a given type in C# 
-
-
-
