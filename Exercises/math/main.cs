@@ -23,5 +23,20 @@ static class Program{
 		// Calculate Pi^e
 		double pie = Pow(PI,E);
 		Write($"Pi raised to the power of e is {pie}\n");
+
+		// Calculate gamma function of 1-10
+		char Gamma = '\u0393';
+
+		Write($"\nCalculation of {Gamma}(1), {Gamma}(2), {Gamma}(3), …, {Gamma}(10):\n");
+		double prod = 1;
+		for (int x = 1 ; x < 10 ; x += 1){
+			Write($"{Gamma}({x}) = {sfuns.fgamma(x)}, {x - 1}! = {prod}\n");
+			prod *= x;
+			}
+
+		Write($"\nCalculation of ln{Gamma}(1), ln{Gamma}(2), ln{Gamma}(3), …, ln{Gamma}(10):\n");
+                for (int x = 1 ; x < 10 ; x += 1){
+                        Write($"ln{Gamma}({x}) = {sfuns.lngamma(x)}\n");
+                        }
 	}
 }
