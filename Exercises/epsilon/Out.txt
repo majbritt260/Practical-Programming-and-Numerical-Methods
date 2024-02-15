@@ -1,0 +1,17 @@
+
+TASK 1
+My maximum representable integer is 2147483647 which should be the same as the int.MaxValue, which yields a value of 2147483647
+My minimum representable integer is -2147483648 which should be the same as the int.MinValue, which yields a value of -2147483648
+
+TASK 2
+The machine epsilon for the double type is 2,22044604925031E-16, which should equal 2,22044604925031E-16
+The machine epsilon for the float type is 1,192093E-07, which should equal 1,19209289550781E-07
+
+TASK 3
+a == b? False
+a == 1? True
+b > 1? True
+I think the machine regocnizes 'tiny' but can't comprehent tiny by itself, hence rounding it down to 0 when adding it to a number it can comprehent. When adding tiny to tiny the machine suddenly can comprehent the number, at thus it is able to add it.
+
+TASK 4
+Using the approximation function to compare d1 and d2 yields True
