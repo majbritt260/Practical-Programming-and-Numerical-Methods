@@ -1,0 +1,38 @@
+
+Number of terms : 100000000
+Number of threads  : 1
+Harmonic sum : 18,9978964138526
+real 0,44
+user 0,41
+sys 0,01
+
+Number of terms : 100000000
+Number of threads  : 2
+Harmonic sum : 18,997896413853
+real 0,32
+user 0,48
+sys 0,01
+
+Number of terms : 100000000
+Number of threads  : 3
+Harmonic sum : 18,9978964138495
+real 0,35
+user 0,70
+sys 0,01
+
+Number of terms : 100000000
+Number of threads  : 4
+Harmonic sum : 18,9978964138499
+real 0,21
+user 0,54
+sys 0,01
+
+Harmonic sum using Parallel.For : 15,5270234791884
+real 1,04
+user 7,13
+sys 0,05
+
+Harmonic sum using ThreadLocal : 18,9978964138537
+real 0,46
+user 2,52
+sys 0,03
