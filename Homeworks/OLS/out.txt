@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------
+PART A, B AND C
+---------------------------------------------------------------------------
+The fitting constants are found to be:
+a = 4,9511553496486 +- 0,0339477544244211
+lambda = 0,169887082001008 +- 0,00695008119420514.
+
+The covariance matrix is:
+   0,00115   0,000178 
+  0,000178   4,83e-05 
+---------------------------------------------------------------------------
+The half-time of ThX is found to be 4,08004641904341 +- 0,166914715082983 days.
+The modern value is 3.6319+-0.0023 days, meaning the value found from the fit differs from the modern value.
+---------------------------------------------------------------------------
+Plot of best fit with uncertainties can be found in fit.svg.

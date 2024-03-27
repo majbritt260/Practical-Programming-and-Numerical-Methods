@@ -1,0 +1,13 @@
+set terminal svg
+set terminal svg background "white"
+set output "fit.svg"
+set key top right
+set xlabel "t [days]"
+set ylabel "Relative intensity"
+set tics out
+set grid
+set title "Radioactive decay of ThX"
+plot "fitdata.txt" using ($1):($2) with lines lc "dark-magenta" title "Exponential fit"\
+,"fitdata.txt" using ($1):($3) with lines lc "web-blue" title "Exponential fit lower"\
+,"fitdata.txt" using ($1):($4) with lines lc "light-red" title "Exponential fit upper"\
+,"data.txt" using 1:2:3 with yerrorbars lc "black" title "Data"\
