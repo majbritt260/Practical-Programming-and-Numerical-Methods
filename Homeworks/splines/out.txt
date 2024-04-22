@@ -1,0 +1,33 @@
+---------------------------------------------------------------------------
+PART A: Linear splines
+---------------------------------------------------------------------------
+An indicative plot of linear splines and their integrals can be seen in lspline.svg
+The desired number of splines between each data point can be modified in lspline.cs
+
+---------------------------------------------------------------------------
+PART B: Quadratic splines
+---------------------------------------------------------------------------
+An indicative plot of quadratic splines their integrals and their derivatives
+can be seen in qspline.svg
+For debugging purposes I considered the 3 different tables given in the
+homework description.
+The manually calculated b and c values are as follows:
+
+for y = 1:        b_i = 0      c_i = 0
+for y = x:        b_i = 1      c_i = 0
+for y = x^2:      b_i = 2*x_i  c_i = 1
+
+Using the same tables in my quadratic-spline routine yields the
+values seen below, which agrees with the manually calculated values.
+---------------------------------------------------------------------------
+for y = 1
+b_i:         0          0          0          0 
+c_i:         0          0          0          0 
+---------------------------------------------------------------------------
+for y = x
+b_i:         1          1          1          1 
+c_i:         0          0          0          0 
+---------------------------------------------------------------------------
+for y = x^2
+b_i:         0          2          4          6 
+c_i:         1          1          1          1 
