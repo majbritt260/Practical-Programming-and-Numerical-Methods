@@ -1,0 +1,11 @@
+set terminal svg background "white"
+set output "odesolver_test.svg"
+set xlabel "x"
+set ylabel "y"
+set grid
+set yrange [-1.1 : 1.1]
+set xrange [-0.1 : 6.4]
+set title "Solution to second order differential equation u'' = -u\n Initial conditions u = 0 and u' = 1"
+set tics out
+plot sin(x) lt rgb "black"\
+, "odesolver_test.txt" using ($1):($2) with points pt 7 ps 0.4 lc rgb "blue" title "solution"\

@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------
+PART A: Embedded rule Runge-Kutta ODE integrator
+---------------------------------------------------------------------------
+The driver and stepper routines are located in ODE.cs, where the embedded
+stepper method is of order 12
+
+For debugging purposes the routines were tested solving the second
+order differential equation u''=-u which should return sin(x). This
+is vizualised in odesolver_test.svg
+
+With the driver and stepper routines the oscillator with friction example is
+ reproduced, and vizualized in damped_oscillator.svg
+
+---------------------------------------------------------------------------
+PART B: Alternative interface
+---------------------------------------------------------------------------
+The ODE interpolator is tested using the same ODE as in part A. This 
+is vizualised in ode_interpolant_test.svg
+
+Integrating the ODE for equatorial motion with the values for ε and initial 
+conditions as stated in the homework description yields newtonian circular 
+motion, newtonial elliptical motion, and the relativistic precession of a 
+planetary orbit, respectively. These results are vizualised and can be seen 
+in planetary_motion.svg
+
