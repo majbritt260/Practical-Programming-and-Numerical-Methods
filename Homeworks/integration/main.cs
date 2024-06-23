@@ -96,7 +96,7 @@ public static void integrator_test(){
 		}
 	}
 
-	WriteLine("A comparison between the error function via its integral representation is illustrated in erfcomparison_tabdata.svg.");
+	WriteLine("A comparison between the error function via its integral representation and the exact values is illustrated in erfcomparison_tabdata.svg.");
 	WriteLine("Furthermore a comparison of the accuracy between the erf from the plots exercise and the integral representation was made.\n"+
 		$"For del = eps = 1E-06, the erf from the plot excercise had a better approximation {erfcount} times, while the integral\n"+
 		$"representation had a better approximation {interfcount} times. This is illustrated in erfcomparison_plotsexercise.svg.\n");
@@ -116,7 +116,7 @@ public static void clenshawcurtis_test(){
 			$"CC result:        {test3.Item1:F6}\n" +
 			$"CC ncalls: {test3.Item2}\nPython ncalls: 231\n");
 
-        WriteLine($"Ordinary integral of 1/Sqrt(x)     from x = 0 to x = 1.\n" +
+        WriteLine($"Integral of 1/Sqrt(x)     from x = 0 to x = 1.\n" +
                         $"Expectation:      {2}\n" +
                         $"Ordinary result:  {test2.Item1:F6}\n" +
                         $"CC result:        {test4.Item1:F6}\n" +
