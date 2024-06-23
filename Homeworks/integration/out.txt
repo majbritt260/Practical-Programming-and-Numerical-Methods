@@ -1,0 +1,47 @@
+---------------------------------------------------------------------------
+PART A: Recursive adaptive integrator
+---------------------------------------------------------------------------
+The integrator is tested using a selection of integrals with an accuracy goal of 1E-06:
+
+Integral of Sqrt(x)       from x = 0 to x = 1.
+Expectation: 0,666667
+Result:      0,666667
+Within accuracy goal: yes
+
+Integral of 1/Sqrt(x)     from x = 0 to x = 1.
+Expectation: 2
+Result:      2,000000
+Within accuracy goal: yes
+
+Integral of 4*Sqrt(1-x^2) from x = 0 to x = 1.
+Expectation: 3,141593
+Result:      3,141593
+Within accuracy goal: yes
+
+Integral of ln(x)/Sqrt(x) from x = 0 to x = 1.
+Expectation: -4
+Result:      -4,000000
+Within accuracy goal: yes
+
+A comparison between the error function via its integral representation is illustrated in erfcomparison_tabdata.svg.
+Furthermore a comparison of the accuracy between the erf from the plots exercise and the integral representation was made.
+For del = eps = 1E-06, the erf from the plot excercise had a better approximation 9 times, while the integral
+representation had a better approximation 23 times. This is illustrated in erfcomparison_plotsexercise.svg.
+
+---------------------------------------------------------------------------
+PART B: Open quadrature with Clenshaw–Curtis variable transformation
+---------------------------------------------------------------------------
+Integral of Sqrt(x)       from x = 0 to x = 1.
+Expectation:      0,666667
+Ordinary result:  0,666667
+CC result:        0,666651
+CC ncalls: 28
+Python ncalls: 231
+
+Ordinary integral of 1/Sqrt(x)     from x = 0 to x = 1.
+Expectation:      2
+Ordinary result:  2,000000
+CC result:        1,999992
+CC ncalls: 16
+Python ncalls: 315
+
