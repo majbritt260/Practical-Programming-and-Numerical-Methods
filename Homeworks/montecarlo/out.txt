@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+PART A: Plain Monte Carlo integration
+---------------------------------------------------------------------------
+A plot of the estimated error and the actual error as functions of the number
+of samplings can be seen in UnitCircle.svg, as well as a plot comparing the
+integral outputs for different numbers of samplings.
+
+Calculating the difficult singular integral from the homework description yields
+Result:    1,38988 +- 0,00400
+Should be: 1,3932039
+
+---------------------------------------------------------------------------
+PART B: Quasi-random sequences
+---------------------------------------------------------------------------
+A plot comparing the estimated errors of the plainMC to that of the quasiMC
+can be found in UnitCircle.svg.
+
