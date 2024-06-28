@@ -2,7 +2,7 @@ Implementation
 --------------
 An implementation of the Cooley Tukey algorithm for FFT can be found in fourierlib.cs. 
 The  modified version not using array-copying was attempted and can be found in modfourierlib.cs.
-However it is not working as intended, as illustrated in NoiseFiltering.svg..
+However it is not working as intended, as illustrated in NoiseFiltering.svg.
 The naive implementation is inspired from the example in The Book.
 
 Demonstration 

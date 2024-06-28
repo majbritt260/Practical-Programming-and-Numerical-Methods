@@ -12,7 +12,7 @@ plot "Noisefiltering.txt" using 1:3 with lines lc rgb "light-blue" title "Noisy 
 	, "NoiseFiltering.txt" using 1:5 with lines lc rgb "web-green" title "Frequency filtered FFT"
 
 
-set title "Noise filtering using modified algorithm for FFTm (Unsuccessful)" font ",17"
+set title "Noise filtering using modified algorithm for FFT (Unsuccessful)" font ",17"
 set xlabel "Time" font ",15"
 set ylabel "Signal" font ",15"
 
