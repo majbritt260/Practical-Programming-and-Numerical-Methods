@@ -1,0 +1,50 @@
+# Noise Filtering
+set terminal svg background "white" size 800,800
+set output "NoiseFiltering.svg"
+set multiplot layout 2,1
+set title "Noise filtering using Cooley-Tukey algorithm for FFT" font ",17"
+set xlabel "Time" font ",15"
+set ylabel "Signal" font ",15"
+
+plot "Noisefiltering.txt" using 1:3 with lines lc rgb "light-blue" title "Noisy signal"\
+	, "NoiseFiltering.txt" using 1:2 with lines lc rgb "royalblue" title "Clean signal"\
+	, "NoiseFiltering.txt" using 1:4 with lines lc rgb "orchid" title "Amplitude filtered FFT"\
+	, "NoiseFiltering.txt" using 1:5 with lines lc rgb "web-green" title "Frequency filtered FFT"
+
+
+set title "Noise filtering using modified algorithm for FFTm (Unsuccessful)" font ",17"
+set xlabel "Time" font ",15"
+set ylabel "Signal" font ",15"
+
+plot "ModNoisefiltering.txt" using 1:3 with lines lc rgb "light-blue" title "Noisy signal"\
+	, "ModNoiseFiltering.txt" using 1:2 with lines lc rgb "royalblue" title "Clean signal"\
+	, "ModNoiseFiltering.txt" using 1:4 with lines lc rgb "orchid" title "Amplitude filtered FFT"\
+	, "ModNoiseFiltering.txt" using 1:5 with lines lc rgb "web-green" title "Frequency filtered FFT"
+
+unset multiplot
+
+# Scaling of Execution Time
+set terminal svg background "white" size 600,500
+set output "ExecutionTime.svg"
+set title "Execution time of FFTs" font ",17"
+set xlabel "No. of data points N" font ",15"
+set ylabel "Execution time [s]" font ",15"
+set key bottom right
+set format x "%.0s x 10^{%S}"
+set xtics 100000
+
+set fit logfile 'ScalingFit.log'
+set fit errorvariables
+a = 1
+b = 0.04
+f(x) = a * x * log(x) + b
+fit f(x) "ExecutionTime.txt" using 1:2 via a,b
+c = 1
+d = 0.04
+g(x) = c * x * log(x) + d
+fit g(x) "ExecutionTime.txt" using 1:3 via c,d
+
+plot f(x) with lines lc rgb "light-blue" title sprintf("%.2f + %.2e NLog(N)", b, a)\
+	,g(x) with lines lc rgb "green" title sprintf("%.2f + %.2e NLog(N)", d, c)\
+	,"ExecutionTime.txt" using 1:2 with points pt 2 lc rgb "royalblue" title "Naive FFT"\
+	,"ExecutionTime.txt" using 1:3 with points pt 2 lc rgb "web-green" title "Modified FFT"
