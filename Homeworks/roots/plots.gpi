@@ -1,0 +1,39 @@
+###### Hydrogen ######
+set terminal svg background "white" size 600,400
+set output "Hydrogen.svg"
+
+set xlabel "r" font ",15"
+set ylabel "f(r)" font ",15"
+set grid
+plot x*exp(-x) with lines lc rgb "red" title "Exact solution: re^{-r}" \
+	,"Hydrogen.txt" with lines lc rgb "royalblue" title "Numerical solution"
+
+
+###### Covergence ######
+set terminal svg background "white" size 800,700
+set output "Convergence.svg"
+set multiplot layout 2,2
+set grid
+
+set title "Varying r_{min}" font ",16"
+set xlabel "r_{min}"
+set yrange [-0.66:-0.48]
+plot "Convergence.txt" using 1:2 with lines lw 1.5 lc rgb "orange" title "E_0"
+
+set title "Varying r_{max}" font ",16"
+set xlabel "r_{max}"
+set yrange [-1:2.5]
+plot "Convergence.txt" using 3:4 with lines lw 1.5 lc rgb "orchid" title "E_0"
+
+set title "Varying acc" font ",16"
+set xlabel "acc"
+set yrange [-0.5007:-0.50015]
+set key bottom left
+plot "Convergence.txt" using 5:6 with lines lw 1.5 lc rgb "forest-green" title "E_0"
+
+set title "Varying eps" font ",16"
+set xlabel "eps"
+set yrange [-0.50034:-0.500205]
+set key bottom left
+plot "Convergence.txt" using 7:8 with lines lw 1.5 lc rgb "royalblue" title "E_0"
+
