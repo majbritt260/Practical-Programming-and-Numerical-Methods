@@ -1,0 +1,12 @@
+
+set terminal svg background "white" size 600, 600
+set out "Higgs.svg"
+
+set xlabel "E [GeV]"
+set ylabel "Signal"
+set grid
+
+set title "Breit Wigner fit to Higgs data" font ",14"
+plot "higgsdata.txt" with yerrorbars pt 7 ps 0.8 lc rgb "royalblue" title "Data"\
+	,"Fitting.txt" using 1:2 with lines lw 1.5 lc rgb "forest-green" title "Fit"
+

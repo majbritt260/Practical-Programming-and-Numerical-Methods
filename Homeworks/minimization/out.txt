@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+PART A: Newton's method with numerical gradient, numerical Hessian matrix and back-tracking linesearch
+-------------------------------------------------------------------------------------
+Rosenbrock minimum: 1,00001429878119, 1,00002843452498 in 15 steps
+Himmelblau minimum: -3,77931221895615, -3,28318663888512 in 5 steps
+-------------------------------------------------------------------------------------
+PART B: Higgs boson discovery
+-------------------------------------------------------------------------------------
+Initial guess: m = 126, Γ = 2, A = 11
+Fitted parameters: m = 125,99860397856, Γ = 2,13002456572038, A = 11,0380423599907
+The plotted fit together with the experimental data is vizualised in Higgs.svg
