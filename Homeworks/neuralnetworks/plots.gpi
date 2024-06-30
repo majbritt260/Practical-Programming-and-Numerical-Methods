@@ -1,0 +1,23 @@
+set output "plot.svg"
+set terminal svg background "white" size 1000,1000
+
+set multiplot layout 2,2
+set grid
+
+set title "6 neurons, 50 training points" font ",18"
+plot "Interpolation.txt" using 1:2 with lines  lc rgb "forest-green" title "Interpolation"\
+	,"Training.txt" using 1:2 with points pt 6 ps 0.8 lc rgb "royalblue" title "Training points"\
+	,cos(5*x)*exp(-x*x) with lines lc rgb "royalblue" title "Analytic function"
+
+set title "Derivative" font ",18"
+plot "Interpolation.txt" using 1:3 with lines lc rgb "forest-green"  title "Derivative"\
+	,-5*sin(5*x)*exp(-x*x) - 2*x*cos(5*x)*exp(-x*x) with lines lc rgb "royalblue" title "Analytic derivative"
+
+set title "2nd derivative" font ",18"
+set key bottom right
+plot "Interpolation.txt" using 1:4 with lines lc rgb "forest-green"  title "2nd derivative"\
+	,exp(-x*x)*(-25*cos(5*x) + 10*x*sin(5*x) - 2*cos(5*x) + 10*x*sin(5*x) + 4*x*x*cos(5*x)) with lines lc rgb "royalblue" title "Analytic 2nd derivative"
+
+set title "Antiderivative" font ",18"
+set key bottom right
+plot "Interpolation.txt" using 1:5 with lines lc rgb "forest-green"  title "Antiderivative"\
