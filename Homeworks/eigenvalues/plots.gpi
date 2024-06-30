@@ -1,0 +1,37 @@
+##### Eigenfunctions #####
+set term svg background "white"
+set output "eigenfunctions.svg"
+set title "Radial s-wave functions" font ",17"
+set xlabel "r" font ",15"
+set ylabel "f(r)" font ",15"
+
+plot  "eigenfunctions.txt" using 1:2 with points pt 7 ps 0.4 title "Numerical n = 1"\
+	,"eigenfunctions.txt" using 1:3 with points pt 7 ps 0.4 title "Numerical n = 2"\
+	,"eigenfunctions.txt" using 1:4 with points pt 7 ps 0.4 title "Numerical n = 3"\
+	,"analytical_eigenfunctions.txt" using 1:2 with lines lc rgb "black" title "Analytical"\
+        ,"analytical_eigenfunctions.txt" using 1:3 with lines lc rgb "black" title ""\
+        ,"analytical_eigenfunctions.txt" using 1:4 with lines lc rgb "black" title ""\
+
+
+##### Convergence #####
+set term svg background "white" size 1000,500
+set output "convergence.svg"
+set multiplot layout 1,2
+set grid
+
+# rmax
+set title "E_0 convergence with rmax"
+set xlabel "rmax"
+set ylabel "E_{0}"
+set yrange [-0.55:-0.1]
+set key top left 
+plot "convergence_rmax.txt" with points pt 7 ps 0.6 lc rgb "royalblue" title "fixed dr = 0.1"\
+	, "convergence_rmax.txt" with lines lc rgb "royalblue" notitle\
+
+#dr
+set title "E_0 convergence with dr"
+set xlabel "dr"
+set yrange [-0.51:-0.42]
+set key top left
+plot "convergence_dr.txt" with points pt 7 ps 0.6 lc rgb "forest-green"  title "fixed rmax = 30"\
+        , "convergence_dr.txt" with lines lc rgb "forest-green" notitle\
