@@ -1,7 +1,7 @@
 LIBS = $(addprefix -reference:, $(filter %.dll, $^))
 CODE = $(filter %.cs, $^)
 
-plots : plots.gpi NoiseFiltering.txt ModNoiseFiltering.txt ExecutionTime.txt Makefile
+plots : plots.gpi
 	gnuplot $<
 
 NoiseFiltering.txt : main.exe Makefile

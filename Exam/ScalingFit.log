@@ -1,7 +1,7 @@
 
 
 *******************************************************************************
-Sat Jun 29 00:18:26 2024
+Sun Jun 30 23:23:19 2024
 
 
 FIT:    data read from "ExecutionTime.txt" using 1:2
@@ -14,21 +14,21 @@ function used for fitting: f(x)
 fitted parameters initialized with current variable values
 
 iter      chisq       delta/lim  lambda   a             b            
-   0 6.1433627985e+13   0.00e+00  2.09e+06    1.000000e+00   4.000000e-02
-   5 3.0187624617e-04  -8.51e-03  2.09e+01    1.081986e-07   4.000000e-02
+   0 6.1433628539e+13   0.00e+00  2.09e+06    1.000000e+00   4.000000e-02
+   5 1.4497500547e-04  -4.38e-04  2.09e+01    1.036884e-07   4.000000e-02
 
 After 5 iterations the fit converged.
-final sum of squares of residuals : 0.000301876
-rel. change during last iteration : -8.51409e-08
+final sum of squares of residuals : 0.000144975
+rel. change during last iteration : -4.38108e-09
 
 degrees of freedom    (FIT_NDF)                        : 5
-rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00777015
-variance of residuals (reduced chisquare) = WSSR/ndf   : 6.03752e-05
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0053847
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.8995e-05
 
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
-a               = 1.08199e-07      +/- 1.274e-09    (1.177%)
-b               = 0.04             +/- 0.003773     (9.433%)
+a               = 1.03688e-07      +/- 8.827e-10    (0.8513%)
+b               = 0.04             +/- 0.002615     (6.537%)
 
 correlation matrix of the fit parameters:
                 a      b      
@@ -37,7 +37,7 @@ b              -0.628  1.000
 
 
 *******************************************************************************
-Sat Jun 29 00:18:26 2024
+Sun Jun 30 23:23:19 2024
 
 
 FIT:    data read from "ExecutionTime.txt" using 1:3
@@ -50,21 +50,93 @@ function used for fitting: g(x)
 fitted parameters initialized with current variable values
 
 iter      chisq       delta/lim  lambda   c             d            
-   0 6.1433628815e+13   0.00e+00  2.09e+06    1.000000e+00   4.000000e-02
-   5 1.1068831910e-04  -9.92e-04  2.09e+01    1.014482e-07   4.000000e-02
+   0 6.1433628617e+13   0.00e+00  2.09e+06    1.000000e+00   4.000000e-02
+   5 1.0504068883e-04  -3.25e-03  2.09e+01    1.030582e-07   4.000000e-02
 
 After 5 iterations the fit converged.
-final sum of squares of residuals : 0.000110688
-rel. change during last iteration : -9.92193e-09
+final sum of squares of residuals : 0.000105041
+rel. change during last iteration : -3.25154e-08
 
 degrees of freedom    (FIT_NDF)                        : 5
-rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00470507
-variance of residuals (reduced chisquare) = WSSR/ndf   : 2.21377e-05
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00458346
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.10081e-05
 
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
-c               = 1.01448e-07      +/- 7.713e-10    (0.7603%)
-d               = 0.04             +/- 0.002285     (5.712%)
+c               = 1.03058e-07      +/- 7.513e-10    (0.729%)
+d               = 0.04             +/- 0.002226     (5.564%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d              -0.628  1.000 
+
+
+*******************************************************************************
+Sun Jun 30 23:25:15 2024
+
+
+FIT:    data read from "ExecutionTime.txt" using 1:2
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a * x * log(x) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.1433628539e+13   0.00e+00  2.09e+06    1.000000e+00   4.000000e-02
+   5 1.4497500547e-04  -4.38e-04  2.09e+01    1.036884e-07   4.000000e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.000144975
+rel. change during last iteration : -4.38108e-09
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0053847
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.8995e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1.03688e-07      +/- 8.827e-10    (0.8513%)
+b               = 0.04             +/- 0.002615     (6.537%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.628  1.000 
+
+
+*******************************************************************************
+Sun Jun 30 23:25:15 2024
+
+
+FIT:    data read from "ExecutionTime.txt" using 1:3
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = c * x * log(x) + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 6.1433628617e+13   0.00e+00  2.09e+06    1.000000e+00   4.000000e-02
+   5 1.0504068883e-04  -3.25e-03  2.09e+01    1.030582e-07   4.000000e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.000105041
+rel. change during last iteration : -3.25154e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00458346
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.10081e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 1.03058e-07      +/- 7.513e-10    (0.729%)
+d               = 0.04             +/- 0.002226     (5.564%)
 
 correlation matrix of the fit parameters:
                 c      d      

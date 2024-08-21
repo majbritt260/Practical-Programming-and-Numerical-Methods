@@ -606,7 +606,7 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(415.28,432.53)" stroke="none" fill="black" font-family="Arial" font-size="17.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Noise filtering using modified algorithm for FFTm (Unsuccessful)</tspan></text>
+		<text><tspan font-family="Arial" >Noise filtering using modified algorithm for FFT (Unsuccessful)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
